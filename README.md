@@ -5,6 +5,7 @@ https://github.com/OpenClassrooms-Student-Center/dwj-projet6
 
 Lancement du frontend :
 cd frontend
+
 npm install
 ng serve
 
