@@ -4,6 +4,7 @@ const app = express();
 const helmet = require ('helmet');
 const bodyParser = require('body-parser');
 const path = require('path');
+const mongoSanitize = require('express-mongo-sanitize');
 
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
@@ -26,9 +27,8 @@ mongoose.connect(process.env.DB_URI,
   });
   
   app.use(helmet());
+  app.use(mongoSanitize());
 
- 
-  
   app.use('/images', express.static(path.join(__dirname, 'images')));
   app.use('/api/auth', userRoutes);
   app.use('/api/sauces', sauceRoutes);
