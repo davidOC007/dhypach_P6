@@ -19,7 +19,9 @@ npm install
 
 node server.js ou nodemon.serve
 
-Lancement de l'application :
-http:/locashost/4200/login
-
 A noter que pour se connecter à la BDD, il est nécessaire de créer un fichier .env dans le dossier backend, et le renseigner avec les informations fournies.
+
+Lancement de l'application :
+http:/localhost/4200/login
+
+
